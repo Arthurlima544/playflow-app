@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       title: "My App",
       home: HomePage(),
       theme: ThemeData(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
