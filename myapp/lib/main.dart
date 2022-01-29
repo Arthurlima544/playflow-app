@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/DisableBottonBar.dart';
 
 import 'Pages/HomePage.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  disableBottomBarAndTopBar();
   runApp(MyApp());
 }
 
