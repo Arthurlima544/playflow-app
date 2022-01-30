@@ -37,9 +37,64 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ]),
+            Positioned(
+              bottom: 0,
+              left: 65.45,
+              child: SizedBox(
+                height: 80,
+                width: 300,
+                child: TextButton(
+                  style: ButtonStyle(
+                    elevation: MaterialStateProperty.all(3),
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.grey[200]),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                    ),
+                  ),
+                  onPressed: () {
+                    print("OIIIII");
+                  },
+                  child: Row(
+                    children: [
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Align(
+                          alignment: AlignmentDirectional.center,
+                          child: Container(
+                            width: 30,
+                            height: 30,
+                            child: Image(
+                                image: AssetImage('assets/google_icon.png')),
+                          )),
+                      const SizedBox(
+                        width: 50,
+                      ),
+                      Positioned(
+                          right: 30,
+                          child: Text(
+                            "Entrar com Google",
+                            style: Theme.of(context).textTheme.headline6,
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
+/* 
+style: TextButton.styleFrom(
+                    padding: const EdgeInsets.all(16.0),
+                    primary: Colors.white,
+                    textStyle: const TextStyle(fontSize: 20),
+                  ),
+
+*/
