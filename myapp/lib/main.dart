@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
           ),
           textTheme: TextTheme(
             headline4: GoogleFonts.lexend(),
+            headline6: GoogleFonts.inter(),
           )),
       debugShowCheckedModeBanner: false,
     );
