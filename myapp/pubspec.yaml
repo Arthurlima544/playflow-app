@@ -22,4 +22,5 @@ flutter:
   assets:
     - assets/PayFlow.png
     - assets/woman.png
+    - assets/google_icon.png
   uses-material-design: true
