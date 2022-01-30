@@ -20,4 +20,5 @@ dev_dependencies:
 flutter:
   assets:
     - assets/PayFlow.png
+    - assets/woman.png
   uses-material-design: true
