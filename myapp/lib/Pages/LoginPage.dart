@@ -5,15 +5,27 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(350.0),
-          child: AppBar(
-            elevation: 0,
-            automaticallyImplyLeading: false, // hides leading widget
-          )),
-      body: Container(
-        child: Text("sei la"),
+    return Material(
+      color: Theme.of(context).backgroundColor,
+      child: Container(
+        child: Column(
+          children: [
+            Stack(children: [
+              AppBarContainer(
+                progress: 0.5,
+                height: 600,
+                width: MediaQuery.of(context).size.width,
+                backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+                progressColor: Theme.of(context).backgroundColor,
+              ),
+              const Positioned(
+                child: Image(image: AssetImage("assets/woman.png")),
+                bottom: 189,
+                left: 118.85,
+              ),
+            ]),
+          ],
+        ),
       ),
     );
   }
