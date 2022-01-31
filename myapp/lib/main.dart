@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/AppFlavor.dart';
 import 'package:myapp/DisableBottonBar.dart';
 import 'package:myapp/routes.dart';
-
-import 'Pages/HomePage.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
