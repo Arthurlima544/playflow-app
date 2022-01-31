@@ -3,6 +3,7 @@ import 'package:flutter_flavor/flutter_flavor.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/AppFlavor.dart';
 import 'package:myapp/DisableBottonBar.dart';
+import 'package:myapp/routes.dart';
 
 import 'Pages/HomePage.dart';
 
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "My App",
-      home: HomePage(),
+      routes: routes,
+      initialRoute: '/homePage',
       theme: FlavorConfig.instance.variables["theme"],
       debugShowCheckedModeBanner: false,
     );
