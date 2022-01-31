@@ -21,7 +21,5 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/PayFlow.png
-    - assets/woman.png
-    - assets/google_icon.png
+    - assets/
   uses-material-design: true
