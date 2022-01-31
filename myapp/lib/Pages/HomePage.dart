@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Pages/LoginPage.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -9,9 +10,7 @@ class HomePage extends StatelessWidget {
       child: SafeArea(
         child: GestureDetector(
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-              return LoginPage();
-            }));
+            Navigator.of(context).pushNamed("/loginPage");
           },
           child: const Center(
             child: Image(image: AssetImage("assets/PayFlow.png")),
