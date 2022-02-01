@@ -19,7 +19,8 @@ class SocialLoginButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.shape,
           borderRadius: BorderRadius.circular(5),
-          border: Border.fromBorderSide(BorderSide(color: AppColors.stroke)),
+          border:
+              const Border.fromBorderSide(BorderSide(color: AppColors.stroke)),
         ),
         child: Row(
           children: [
@@ -29,7 +30,7 @@ class SocialLoginButton extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(AppImages.google),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Container(

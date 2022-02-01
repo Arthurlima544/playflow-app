@@ -12,7 +12,7 @@ class LoginPage extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: Container(
+      body: SizedBox(
         height: size.height,
         width: size.width,
         child: Stack(
@@ -52,9 +52,11 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 40, right: 40, top: 40),
+                    padding:
+                        const EdgeInsets.only(left: 40, right: 40, top: 40),
                     child: SocialLoginButton(
                       onTap: () {
+                        // ignore: avoid_print
                         print("object");
                       },
                     ),
