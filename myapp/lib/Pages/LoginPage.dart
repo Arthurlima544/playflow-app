@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:myapp/shared/Components/social_login/SocialLoginButton.dart';
 import 'package:myapp/shared/theme/AppColors.dart';
 import 'package:myapp/shared/theme/AppImages.dart';
@@ -55,9 +56,18 @@ class LoginPage extends StatelessWidget {
                     padding:
                         const EdgeInsets.only(left: 40, right: 40, top: 40),
                     child: SocialLoginButton(
-                      onTap: () {
-                        // ignore: avoid_print
-                        print("object");
+                      onTap: () async {
+                        GoogleSignIn _googleSignIn = GoogleSignIn(
+                          scopes: [
+                            'email',
+                          ],
+                        );
+                        try {
+                          final response = await _googleSignIn.signIn();
+                          print(response);
+                        } catch (error) {
+                          print(error);
+                        }
                       },
                     ),
                   ),
