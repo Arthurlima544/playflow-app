@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:myapp/model/UserModel.dart';
 import 'package:myapp/shared/auth/AuthController.dart';
 
 class LoginController {
@@ -12,7 +13,8 @@ class LoginController {
     );
     try {
       final response = await _googleSignIn.signIn();
-      authController.setUser(context, response);
+      authController.setUser(context,
+          UserModel(name: response!.displayName, photoUrl: response.photoUrl));
       print(response);
     } catch (error) {
       authController.setUser(context, null);
