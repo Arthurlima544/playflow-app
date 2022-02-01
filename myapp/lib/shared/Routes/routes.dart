@@ -4,7 +4,7 @@ import 'package:myapp/Pages/login/LoginPage.dart';
 import 'package:myapp/Pages/SplashPage.dart';
 
 var routes = <String, WidgetBuilder>{
-  '/splashPage': (context) => const SplashPage(),
+  '/splashPage': (context) => SplashPage(),
   '/loginPage': (context) => LoginPage(),
   '/homePage': (context) => HomePage(),
 };
