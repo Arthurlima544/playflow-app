@@ -34,7 +34,7 @@ class _AppFirebaseState extends State<AppFirebase> {
           return MaterialApp(
             title: "My App",
             routes: routes,
-            initialRoute: '/loginPage',
+            initialRoute: '/splashPage',
             debugShowCheckedModeBanner: false,
           );
         }
