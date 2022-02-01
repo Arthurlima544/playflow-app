@@ -6,10 +6,12 @@ import 'package:myapp/shared/Routes/routes.dart';
 
 import 'shared/Components/error/ErrorFirebaseWidget.dart';
 import 'shared/Components/loading/LoadingWidget.dart';
+import 'shared/consts/SetOrientations.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   disableBottomBarAndTopBar();
+  setOrientations();
   runApp(const AppFirebase());
 }
 
