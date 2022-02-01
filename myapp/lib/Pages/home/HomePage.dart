@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[homecontroller.currentPage],
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 90,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -42,8 +42,7 @@ class _HomePageState extends State<HomePage> {
             ),
             GestureDetector(
               onTap: () {
-                homecontroller.setPage(1);
-                setState(() {});
+                Navigator.pushNamed(context, "/barCodePage");
               },
               child: Container(
                 width: 56,
