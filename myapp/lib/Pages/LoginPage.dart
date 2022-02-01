@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
               height: size.height * 0.36,
               color: AppColors.primary,
             ),
-            // TODO: Porque a imagem está fixa em um só ponto?
+            // TODO: Porque a imagem está fixa em um só ponto ?
             Positioned(
               top: 40,
               left: 0,
