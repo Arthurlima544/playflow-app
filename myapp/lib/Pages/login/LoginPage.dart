@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:myapp/Pages/login/LoginController.dart';
 import 'package:myapp/shared/Components/social_login/SocialLoginButton.dart';
 import 'package:myapp/shared/theme/AppColors.dart';
 import 'package:myapp/shared/theme/AppImages.dart';
 import 'package:myapp/shared/theme/AppTextStyles.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
+  final LoginController loginController = LoginController();
 
   @override
   Widget build(BuildContext context) {
@@ -53,21 +55,10 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.only(left: 40, right: 40, top: 40),
+                    padding: EdgeInsets.only(left: 40, right: 40, top: 40),
                     child: SocialLoginButton(
-                      onTap: () async {
-                        GoogleSignIn _googleSignIn = GoogleSignIn(
-                          scopes: [
-                            'email',
-                          ],
-                        );
-                        try {
-                          final response = await _googleSignIn.signIn();
-                          print(response);
-                        } catch (error) {
-                          print(error);
-                        }
+                      onTap: () {
+                        loginController.handleSignIn(context);
                       },
                     ),
                   ),
