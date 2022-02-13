@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/shared/Components/divider_vertical/DividerVerticalWidget.dart';
 import 'package:myapp/shared/Components/label_button/LabelButton.dart';
+import 'package:myapp/shared/theme/AppColors.dart';
 
 class SetLabelButtons extends StatelessWidget {
   final String primarylabel;
@@ -17,7 +18,8 @@ class SetLabelButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      color: AppColors.background,
       height: 56,
       child: Row(
         children: [

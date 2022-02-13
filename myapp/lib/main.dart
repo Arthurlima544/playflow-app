@@ -1,3 +1,4 @@
+import 'package:camera/camera.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -8,10 +9,12 @@ import 'shared/Components/error/ErrorFirebaseWidget.dart';
 import 'shared/Components/loading/LoadingWidget.dart';
 import 'shared/consts/SetOrientations.dart';
 
-void main() {
+late List<CameraDescription> cameras;
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   disableBottomBarAndTopBar();
   setOrientations();
+  cameras = await availableCameras();
   runApp(const AppFirebase());
 }
 
@@ -36,7 +39,7 @@ class _AppFirebaseState extends State<AppFirebase> {
           return MaterialApp(
             title: "My App",
             routes: routes,
-            initialRoute: '/splashPage',
+            initialRoute: '/barCodePage',
             debugShowCheckedModeBanner: false,
           );
         }
